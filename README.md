@@ -24,7 +24,9 @@
 
 ### Solana Dev Tools
 - Get fresh on-chain data directly from your VS Code IDE
+- Make test transactions from your code using your ZODs integrated wallet - no need to open your browser or Phantom wallet
 - Combine on-chain data with AI to shape your code, brainstorm ideas, write tests and more
+- & many more on-chain dev tools straight from your code
 
 ![GPT-4.1 and O3](https://res.cloudinary.com/djm0dkhs2/image/upload/v1701205045/gpt4_xhkpxr.png)
 
