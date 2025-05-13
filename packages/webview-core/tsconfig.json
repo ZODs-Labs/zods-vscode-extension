@@ -1,0 +1,14 @@
+{
+   "compilerOptions": {
+      "outDir": "./dist",
+      "module": "esnext",
+      "target": "ES2018",
+      "jsx": "react-jsx",
+      "declaration": true,
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "skipLibCheck": true
+   },
+   "include": ["."],
+   "exclude": ["dist", "build", "node_modules"]
+}

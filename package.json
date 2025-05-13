@@ -1,0 +1,34 @@
+{
+   "name": "@zods/vscode-monorepo",
+   "version": "1.0.1",
+   "private": true,
+   "scripts": {
+      "build": "pnpm build:webviews && pnpm build:extension",
+      "build-all": "pnpm build:core && pnpm build:webview-core && pnpm build:webviews && pnpm build:icons",
+      "build:core": "pnpm -C ./packages/core build",
+      "build:webview-core": "pnpm -C ./packages/webview-core build",
+      "build:webview:ai-chat": "cd ./web-views/ai-chat && node ../../scripts/build-webview.js --webview ai-chat",
+      "build:webview:test-storm": "cd ./web-views/test-storm && node ../../scripts/build-webview.js --webview test-storm",
+      "build:webviews": "pnpm build:webview:ai-chat && pnpm build:webview:test-storm",
+      "build:extension": "pnpm -C ./extension build",
+      "build:extension:prod": "pnpm -C ./extension build:prod",
+      "package:extension": "cd ./extension && pnpm vsce package --no-dependencies",
+      "build:icons": "pnpm icons:svgo && pnpm icons:generate && pnpm icons:add",
+      "icons:add": "cd ./extension/scripts && node addIconsContribution.mjs",
+      "icons:svgo": "svgo -q -f ./extension/icons/ --config ./extension/svgo.config.js",
+      "icons:generate": "cd ./extension && pnpm fantasticon",
+      "rebuild-packages": "pnpm build:core && pnpm build:webview-core && pnpm install",
+      "webview:test-storm:dev": "pnpm -C ./web-views/test-storm start",
+      "webview:ai-chat": "pnpm -C ./web-views/ai-chat start"
+   },
+   "dependencies": {
+      "react-scripts": "5.0.1"
+   },
+   "devDependencies": {
+      "esbuild": "^0.19.2",
+      "@zods/eslint-config": "workspace:*",
+      "@zods/prettier-config": "workspace:*",
+      "@twbs/fantasticon": "^2.7.2",
+      "svgo": "^3.1.0"
+   }
+}

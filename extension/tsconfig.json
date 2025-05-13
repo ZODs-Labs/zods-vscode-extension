@@ -1,0 +1,31 @@
+{
+   "compilerOptions": {
+      "module": "commonjs",
+      "target": "es2020",
+      "lib": ["es2020"],
+      "allowJs": false,
+      "outDir": "out",
+      "sourceMap": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "strict": true,
+      "rootDir": "src",
+      "baseUrl": "./",
+      "paths": { 
+         "@auth/*": ["src/auth/*"],
+         "@common/*": ["src/common/*"],
+         "@core/*": ["src/@core/*"],
+         "@models/*": ["src/models/*"],
+         "@ioc/*": ["src/ioc/*"],
+         "@services": ["src/services"],
+         "@managers": ["src/managers"],
+         "@handlers/*": ["src/handlers/*"],
+         "@factory": ["src/factory"],
+         "@config/*": ["src/config/*"],
+         "@data-services": ["src/data-services"],
+         "@providers/*": ["src/providers/*"],
+         "@shared/*": ["src/shared/*"]
+      }
+   },
+   "exclude": ["node_modules", ".vscode-test", "build.js"]
+}

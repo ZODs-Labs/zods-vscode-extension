@@ -1,0 +1,22 @@
+{
+   "name": "@zods/core",
+   "version": "1.0.0",
+   "private": true,
+   "main": "./dist/index.js",
+   "module": "./dist/index.mjs",
+   "types": "./dist/index.d.ts",
+   "exports": "./dist/index.mjs",
+   "scripts": {
+      "build": "tsup",
+      "clean": "rm -rf dist/"
+   },
+   "devDependencies": {
+      "@zods/eslint-config": "workspace:*",
+      "@zods/prettier-config": "workspace:*",
+      "@types/node": "^20.10.3",
+      "@types/react": "^18.2.42",
+      "@types/react-dom": "^18.2.17",
+      "typescript": "^4.9.5",
+      "tsup": "^6.7.0"
+   }
+}

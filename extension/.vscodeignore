@@ -1,0 +1,7 @@
+*
+*/**
+
+!resources/**
+!out/**
+!LICENSE
+!CHANGELOG.md

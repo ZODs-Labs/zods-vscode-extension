@@ -1,0 +1,48 @@
+{
+   "name": "@zods/webview-core",
+   "version": "1.0.0",
+   "private": true,
+   "main": "./dist/index.js",
+   "module": "./dist/index.mjs",
+   "types": "./dist/index.d.ts",
+   "exports": "./dist/index.mjs",
+   "scripts": {
+      "build": "tsup",
+      "clean": "rm -rf dist/"
+   },
+   "dependencies": {
+      "@chakra-ui/react": "^2.8.2",
+      "@emotion/react": "^11.11.1",
+      "@emotion/styled": "^11.11.0",
+      "@zods/core": "workspace:*",
+      "framer-motion": "^10.16.14",
+      "highlight.js": "^11.9.0",
+      "lucide-react": "^0.299.0",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-markdown": "^9.0.1"
+   },
+   "devDependencies": {
+      "@chakra-ui/icons": "^2.1.1",
+      "@types/node": "^20.10.3",
+      "@types/react": "^18.2.42",
+      "@types/react-dom": "^18.2.17",
+      "esbuild-sass-plugin": "^2.16.0",
+      "@zods/eslint-config": "workspace:*",
+      "@zods/prettier-config": "workspace:*",
+      "sass": "^1.69.5",
+      "tsup": "^6.7.0",
+      "typescript": "^4.9.5"
+   },
+   "peerDependencies": {
+      "@chakra-ui/react": ">=2.8.2",
+      "@emotion/react": ">=11.11.1",
+      "@emotion/styled": ">=11.11.0",
+      "framer-motion": ">=10.16.14",
+      "highlight.js": ">=11.9.0",
+      "react": ">=18.2.0",
+      "react-dom": ">=18.2.0",
+      "react-markdown": ">=9.0.1",
+      "lucide-react": ">=0.299.0"
+   }
+}

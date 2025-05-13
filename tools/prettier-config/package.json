@@ -1,0 +1,9 @@
+{
+   "name": "@zods/prettier-config",
+   "version": "1.0.0",
+   "license": "MIT",
+   "main": "index.js",
+   "devDependencies": {
+      "prettier": "^2.0.5"
+   }
+}

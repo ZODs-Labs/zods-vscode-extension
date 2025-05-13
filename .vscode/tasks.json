@@ -1,0 +1,16 @@
+{
+   "version": "2.0.0",
+   "tasks": [
+      {
+         "label": "build-extension",
+         "type": "shell",
+         "command": "pnpm",
+         "args": ["run", "build"],
+         "presentation": {
+            "reveal": "always",
+            "panel": "shared"
+         },
+         "problemMatcher": []
+      }
+   ]
+}

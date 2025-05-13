@@ -1,0 +1,196 @@
+{
+   "name": "zodslensai",
+   "displayName": "ZODs Lens AI",
+   "description": "Generate tests, shape code, and chat with top AI models—now with Solana dev tools and on-chain data integration.",
+   "categories": [
+      "Programming Languages",
+      "Snippets",
+      "Linters",
+      "Formatters",
+      "Data Science",
+      "Machine Learning",
+      "Azure",
+      "Education",
+      "Testing"
+   ],
+   "tags": [
+      "ai",
+      "ai lens",
+      "lens",
+      "agents",
+      "chatgpt",
+      "gpt-4.1",
+      "o3",
+      "o4-mini",
+      "unit tests",
+      "testing",
+      "autocomplete",
+      "openai",
+      "snippets",
+      "snippet management"
+   ],
+   "publisher": "zodslensai",
+   "version": "1.0.2",
+   "private": true,
+   "repository": "https://github.com/ZODs-Labs/zods-vscode-extension",
+   "icon": "resources/zods_logo_full.png",
+   "license": "LICENSE",
+   "extensionKind": [
+      "ui"
+   ],
+   "engines": {
+      "vscode": "^1.81.0"
+   },
+   "activationEvents": [
+      "onStartupFinished"
+   ],
+   "capabilities": {
+      "authentication": {
+         "supportsMultipleAccounts": false
+      }
+   },
+   "authentication": {
+      "id": "zods",
+      "scopes": [
+         "read:snippets"
+      ]
+   },
+   "contributes": {
+      "authentication": [
+         {
+            "id": "zods",
+            "label": "Sign in with ZODs"
+         }
+      ],
+      "configuration": {
+         "title": "ZODs Lens AI",
+         "properties": {
+            "zods.ai.model": {
+               "type": "string",
+               "title": "ZODs AI: Model",
+               "default": "GPT-4.1",
+               "enum": [
+                  "GPT-4.1",
+                  "O3",
+                  "O4-Mini"
+               ],
+               "enumDescriptions": [
+                  "The GPT-4.1 model is the most advanced model for the AI Chat feature.",
+                  "The O3 model is the most advanced model for the AI Chat feature.",
+                  "The O4-Mini model is the most advanced model for the AI Chat feature."
+               ],
+               "description": "The AI model to use for the AI Chat feature. The default is the GPT-4.1 model."
+            },
+            "zods.ai.openai.apikey": {
+               "title": "ZODs AI: OpenAI API Key",
+               "type": "string",
+               "description": "Enter your own OpenAI API key with ZODs AI's GPT model features. Obtain your key from the OpenAI platform. Note: Your API key is stored in VS Code settings and not elsewhere. Keep it confidential."
+            },
+            "zods.ai.maxTokens": {
+               "title": "ZODs AI: Max Tokens",
+               "type": "number",
+               "default": 1500,
+               "description": "The maximum number of tokens to generate for the AI Chat feature. The default is 500.",
+               "minimum": 250,
+               "maximum": 4000
+            },
+            "zods.lens.disableOverriding": {
+               "title": "ZODs Lens: Disable JS/TS Lens Configuration Overriding",
+               "type": "boolean",
+               "default": false,
+               "description": "Disable overriding of existing configuration for JS/TS Lens. If you disable overriding, the extension will not override any existing configuration for JS/TS lens. The default is false."
+            }
+         }
+      },
+      "commands": [
+         {
+            "command": "zods.login",
+            "title": "ZODs Login"
+         },
+         {
+            "command": "zods.logout",
+            "title": "ZODs Logout"
+         },
+         {
+            "command": "zods.syncSnippets",
+            "title": "ZODs Sync Snippets"
+         },
+         {
+            "command": "zods.setSelectedCodeAsAIChatContext",
+            "title": "ZODs: Set Selected Code AI Chat context"
+         },
+         {
+            "command": "zods.syncAILenses",
+            "title": "ZODs: Sync AI Lenses"
+         },
+         {
+            "command": "zods.testStorm.show",
+            "title": "ZODs: Show Test Storm"
+         }
+      ],
+      "menus": {
+         "editor/context": [
+            {
+               "when": "editorHasSelection",
+               "command": "zods.setSelectedCodeAsAIChatContext",
+               "group": "zods"
+            }
+         ]
+      },
+      "viewsContainers": {
+         "activitybar": [
+            {
+               "id": "zods",
+               "title": "ZODs",
+               "icon": "resources/contrast-logo.png"
+            }
+         ]
+      },
+      "views": {
+         "zods": [
+            {
+               "id": "zods.webview.ai-chat",
+               "name": "ZODs AI Chat",
+               "type": "webview"
+            }
+         ]
+      },
+      "icons": {
+         "zods-contrast-logo": {
+            "description": "contrast-logo icon",
+            "default": {
+               "fontPath": "out/zodsicons.woff2",
+               "fontCharacter": "\\f102"
+            }
+         }
+      }
+   },
+   "outputChannelName": "ZODs Lens AI",
+   "main": "./out/index.js",
+   "scripts": {
+      "vscode:prepublish": "pnpm build:prod",
+      "build": "cross-env node build.js --sourcemap",
+      "build:prod": "cross-env NODE_ENV=production node build.js"
+   },
+   "dependencies": {
+      "axios": "^1.5.0",
+      "ignore": "^5.3.0",
+      "inversify": "^6.0.1",
+      "reflect-metadata": "^0.1.13"
+   },
+   "devDependencies": {
+      "@zods/core": "workspace:*",
+      "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+      "@types/node": "^16.18.34",
+      "@types/react": "^18.2.33",
+      "@types/react-dom": "^18.2.14",
+      "@types/vscode": "^1.73.0",
+      "@vscode/vsce": "^2.22.0",
+      "cross-env": "^7.0.3",
+      "eslint": "8.47.0",
+      "@zods/eslint-config": "workspace:*",
+      "prettier": "^2.0.5",
+      "@zods/prettier-config": "workspace:*",
+      "typescript": "^5.1.3"
+   }
+}

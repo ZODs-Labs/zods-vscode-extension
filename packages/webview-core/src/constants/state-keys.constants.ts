@@ -1,0 +1,15 @@
+export const StateKeys = {
+   AuthToken: 'authToken',
+   ActivePanelType: 'activePanelType',
+   AIModel: 'aiModel',
+   AILenses: 'aiLenses',
+   IsSettingsPanelOpened: 'isSettingsPanelOpened',
+   AIChatCodeContext: 'aiChatCodeContext',
+   FileExtension: 'fileExtension',
+   MaxAIChatTokens: 'maxAIChatTokens',
+   OpenAIApiKey: 'openAIApiKey',
+   FileTree: 'fileTree',
+   WorkspaceUri: 'workspaceUri',
+   TestCases: 'testCases',
+   UnitTests: 'unitTests',
+};

@@ -1,0 +1,15 @@
+export const StateKeys = {
+   AIModel: 'aiModel',
+   ContextCode: 'contextCode',
+   FileExtension: 'fileExtension',
+   FileTree: 'fileTree',
+   TestFilePath: 'testFilePath',
+   TestCases: 'testCases',
+   UnitTests: 'unitTests',
+   TestPattern: 'testPattern',
+   TestFramework: 'testFramework',
+   IsLoadingTestCases: 'isLoadingTestCases',
+   IsLoadingUnitTests: 'isLoadingUnitTests',
+   TestCasesErrorMessage: 'testCasesErrorMessage',
+   UnitTestsErrorMessage: 'unitTestsErrorMessage',
+};

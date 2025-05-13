@@ -1,0 +1,14 @@
+{
+   "compilerOptions": {
+      "outDir": "./dist",
+      "module": "esnext",
+      "target": "ES2018",
+      "jsx": "react-jsx",
+      "declaration": true,
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "skipLibCheck": true
+   },
+   "include": [".", "../../extension/src/common/enums/message-command.enum.ts", "../webview-core/src/constants/state-keys.constants.ts"],
+   "exclude": ["dist", "build", "node_modules"]
+}

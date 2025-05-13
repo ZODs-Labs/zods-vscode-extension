@@ -1,0 +1,15 @@
+// @import 'vscode.css';
+
+body {
+   margin: 0;
+   font-family: var(--vscode-font-family);
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+
+   color: var(--vscode-foreground);
+}
+
+code {
+   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+}

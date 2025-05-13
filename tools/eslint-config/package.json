@@ -1,0 +1,13 @@
+{
+   "name": "@zods/eslint-config",
+   "version": "1.0.0",
+   "license": "MIT",
+   "main": "index.js",
+   "devDependencies": {
+      "@typescript-eslint/eslint-plugin": "^6.5.0",
+      "@typescript-eslint/parser": "^5.42.0",
+      "eslint-config-next": "^14.0.4",
+      "eslint-config-prettier": "^9.1.0",
+      "eslint-plugin-unused-imports": "^3.0.0"
+   }
+}

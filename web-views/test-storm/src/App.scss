@@ -1,0 +1,152 @@
+body {
+   color: var(--vscode-foreground);
+   background-color: var(--vscode-editor-background);
+}
+/* For Webkit Browsers */
+::-webkit-scrollbar {
+   width: 8px; /* For horizontal scrollbars */
+   height: 8px; /* For vertical scrollbars */
+}
+
+::-webkit-scrollbar-thumb {
+   background: rgba(
+      255,
+      255,
+      255,
+      0.438
+   ); /* Light gray with some transparency */
+   border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: rgba(255, 255, 255, 0.63);
+}
+
+/* For Firefox */
+* {
+   scrollbar-width: thin;
+   scrollbar-color: rgba(255, 255, 255, 0.1) transparent; /* Thumb and track color */
+}
+
+.markdown-error {
+   color: var(--vscode-errorForeground);
+   min-height: 100px;
+   padding-left: 12px;
+   padding-top: 12px;
+}
+
+.chakra-modal__content-container {
+   padding-left: 25px;
+   padding-right: 25px;
+}
+
+.chakra-collapse {
+   overflow: visible !important;
+}
+.secondary-box {
+   background-color: var(--vscode-editor-background);
+   color: var(--vscode-editor-foreground);
+}
+pre {
+   overflow-x: auto;
+   font-family: var(--chakra-fonts-body) !important;
+}
+
+.user-message {
+   text-wrap: initial;
+}
+
+.vscode-button {
+   background-color: var(--vscode-button-background) !important;
+   &:hover {
+      background-color: var(--vscode-button-hoverBackground) !important;
+   }
+}
+
+.vscode-error-foreground {
+   color: var(--vscode-errorForeground);
+}
+a {
+   color: var(--vscode-textLink-foreground) !important;
+
+   &:hover {
+      color: var(--vscode-textLink-activeForeground) !important;
+   }
+}
+
+.switch-button {
+   .chakra-switch__track {
+      background-color: var(--vscode-button-secondaryBackground);
+
+      &[data-checked] {
+         background-color: var(--vscode-button-background);
+      }
+   }
+}
+
+/* Typing indicator animation */
+.typingIndicatorContainer {
+   display: flex;
+   flex: none;
+   align-items: flex-end;
+}
+
+.typingIndicatorBubble {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 5px 8px;
+   border-radius: 12px;
+}
+
+.typingIndicatorBubbleDot {
+   width: 7px;
+   height: 7px;
+   margin-right: 6px;
+   background-color: #c0c4ce;
+   border-radius: 50%;
+   animation-name: bounce;
+   animation-duration: 1.1s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+}
+
+.typingIndicatorBubbleDot:first-of-type {
+   margin: 0px 6px;
+}
+
+.typingIndicatorBubbleDot:nth-of-type(2) {
+   animation-delay: 0.15s;
+}
+
+.typingIndicatorBubbleDot:nth-of-type(3) {
+   animation-delay: 0.3s;
+}
+
+.zods-ai-code {
+   background-color: transparent !important;
+   font-size: 12px;
+
+   @media screen and (min-width: 800px) {
+      font-size: 13px;
+   }
+}
+
+code {
+   color: #cccccc !important;
+}
+
+details > summary {
+   list-style: none;
+}
+
+@keyframes bounce {
+   0%,
+   60%,
+   100% {
+      transform: translateY(0);
+   }
+   30% {
+      transform: translateY(-7px);
+   }
+}
